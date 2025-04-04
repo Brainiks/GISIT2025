@@ -87,10 +87,19 @@ body, html {
   border: 1px solid #ccc;
   border-radius: 5px;
   resize: vertical;
-  width: 100%;
+  width: 80%;
 }
 
 #event-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#close-popup {
   padding: 10px 20px;
   font-size: 16px;
   background-color: #007BFF;
@@ -104,3 +113,25 @@ body, html {
   background-color: #0056b3;
 }
 
+/* Стили для списка точек */
+#points-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#points-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#points-list li:last-child {
+  border-bottom: none;
+}
+
+#points-list li .point-details {
+  flex-grow: 1;
+  margin-right: 10px;
+}
