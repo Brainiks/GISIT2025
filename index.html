@@ -14,18 +14,34 @@
 
   <!-- Панель управления -->
   <footer class="control-panel">
-    <button id="button1">Кнопка 1</button>
-    <button id="button2">Кнопка 2</button>
-    <button id="button3">Кнопка 3</button>
+    <button id="button1"><img src="assets\List.png" alt=""></button>
+    <button id="button2"><img src="assets\Search.png" alt=""></button>
+    <button id="button3"><img src="assets\Map pin.png" alt=""></button>
   </footer>
 
   <!-- Всплывающий блок -->
   <div id="popup" class="popup">
     <div class="popup-content">
-      <h2>Информация о маршруте</h2>
-      <p>Детали маршрута будут здесь...</p>
+      <h2>Создание точки события</h2>
+      <form id="event-form">
+        <!-- Селектор категории -->
+        <label for="category">Выберите категорию:</label>
+        <select id="category" name="category">
+          <option value="">Выберите категорию</option>
+          <option value="оползень">Оползень</option>
+          <option value="дорожная авария">Дорожная авария</option>
+          <option value="пожар">Пожар</option>
+          <option value="пробка">Пробка</option>
+        </select>
+
+        <!-- Текстовое поле для описания -->
+        <label for="description">Описание события:</label>
+        <textarea id="description" name="description" rows="4" placeholder="Введите описание события..."></textarea>
+
+        <!-- Кнопка отправки -->
+        <button type="submit">Создать точку</button>
+      </form>
     </div>
-  </div>
 
   <script src="js/window.js"></script>
 </body>
