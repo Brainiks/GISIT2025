@@ -53,6 +53,10 @@ document.getElementById('button1').addEventListener('click', () => {
 });
 
 // Обработка нажатия на кнопку закрытия всплывающего окна
+document.getElementById('close-list').addEventListener('click', () => {
+  togglePopup('popup-list');
+});
+// Обработка нажатия на кнопку закрытия всплывающего окна
 document.getElementById('close-popup').addEventListener('click', () => {
   togglePopup('popup');
 });
@@ -82,5 +86,19 @@ function updatePointsList() {
       points.splice(index, 1);
       updatePointsList();
     });
+  });
+}
+
+
+// Регистрация Service Worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then((registration) => {
+        console.log('Service Worker registered with scope:', registration.scope);
+      })
+      .catch((error) => {
+        console.error('Service Worker registration failed:', error);
+      });
   });
 }

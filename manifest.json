@@ -1,0 +1,25 @@
+{
+    "name": "ГИС-приложение",
+    "short_name": "GIS App",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#007BFF",
+    "icons": [
+      {
+        "src": "assets/List.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/Search.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/Map pin.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }

@@ -20,6 +20,7 @@ body, html {
 .control-panel {
   position: fixed;
   bottom: 0;
+  padding-top: 10px;
   left: 0;
   width: 100%;
   background-color: #007BFF;
@@ -100,6 +101,8 @@ body, html {
   cursor: pointer;
 }
 #close-popup {
+  display: flex;
+  margin-top: 10px;
   padding: 10px 20px;
   font-size: 16px;
   background-color: #007BFF;
@@ -107,6 +110,23 @@ body, html {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+#close-list {
+  margin-left: 25px;
+  display: flex;
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#close-popup button:hover {
+  background-color: #0056b3;
 }
 
 #event-form button:hover {
