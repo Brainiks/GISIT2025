@@ -6,9 +6,10 @@ const urlsToCache = [
   '/index.html',
   '/css/main.css',
   '/js/window.js',
-  '/assets/List.png',
-  '/assets/Search.png',
-  '/assets/Map pin.png',
+  '/assets/List.svg',
+  '/assets/Search.svg',
+  '/assets/Map pin.svg',
+  '/assets/point-icon.png',
   '/manifest.json'
 ];
 

@@ -7,17 +7,22 @@
     "theme_color": "#007BFF",
     "icons": [
       {
-        "src": "assets/List.png",
+        "src": "assets/List.svg",
+        "sizes": "48x48",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/Search.svg",
         "sizes": "512x512",
         "type": "image/png"
       },
       {
-        "src": "assets/Search.png",
+        "src": "assets/Map pin.svg",
         "sizes": "512x512",
         "type": "image/png"
       },
       {
-        "src": "assets/Map pin.png",
+        "src": "assets/point-icon.png",
         "sizes": "512x512",
         "type": "image/png"
       }

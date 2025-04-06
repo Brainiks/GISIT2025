@@ -158,3 +158,35 @@ backButton.addEventListener('click', () => {
   // Возвращаем панель управления
   controlPanel.classList.remove('hidden');
 });
+
+// При отсутствии интернета
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.ready.then(() => {
+    console.log('Service Worker is ready');
+
+    // Проверка подключения к интернету
+    if (!navigator.onLine) {
+      alert('Нет подключения к интернету. Приложение будет работать офлайн.');
+    }
+  });
+}
+
+
+// js/window.js
+
+// script.js
+
+// Ждём полной загрузки страницы
+window.addEventListener('load', () => {
+  const loadingScreen = document.getElementById('loading-screen');
+  const mainContent = document.getElementById('main-content');
+
+  // Показываем основной контент через 3 секунды (или время анимации)
+  setTimeout(() => {
+    // Добавляем класс для скрытия экрана загрузки
+    loadingScreen.classList.add('hidden');
+
+    // Показываем основной контент
+    mainContent.style.display = 'block';
+  }, 2000); // 3 секунды — время показа логотипа
+});

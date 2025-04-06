@@ -6,14 +6,25 @@
   <title>ГИС-приложение</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="manifest" href="manifest.json">
-  
+  <!-- index.html -->
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="ГИС-приложение">
+  <meta name="msapplication-TileColor" content="#007BFF">
+  <meta name="msapplication-navbutton-color" content="#007BFF">
+  <meta name="theme-color" content="#007BFF">
   
 </head>
 <body>
+  <!-- Экран загрузки -->
+  <div id="loading-screen">
+    <img src="assets/logo.svg" alt="Логотип" id="logo">
+  </div>
   <!-- Блок для карты -->
   <iframe
     width="100%"
-    height="600px"
+    height="830px"
     src="https://ee-ilya24608.projects.earthengine.app/view/gisit"
     frameborder="0"
     allowfullscreen>
@@ -22,7 +33,7 @@
   
   <footer class="control-panel" id="control-panel">
     <button id="button1"><img src="assets/List.svg" alt=""></button>
-    <button id="button2"><img src="assets/Search.svg" alt=""></button>
+    <!-- <button id="button2"><img src="assets/Search.svg" alt=""></button> -->
     <button id="button3"><img src="assets/Map pin.svg" alt=""></button>
   </footer>
 
@@ -77,5 +88,21 @@
   
 
   <script src="js/window.js"></script>
+  <!-- <script> // Обработка ошибок
+    document.addEventListener('DOMContentLoaded', () => {
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js')
+            .then((registration) => {
+              console.log('Service Worker registered with scope:', registration.scope);
+            })
+            .catch((error) => {
+              console.error('Service Worker registration failed:', error);
+              alert('Ошибка регистрации Service Worker: ' + error);
+            });
+        });
+      }
+    });
+    </script> -->
 </body>
 </html>
